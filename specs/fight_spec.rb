@@ -13,18 +13,27 @@ def setup
     :spear_gun => 50  #first increases str by 10, 
               }
 
-  @fight = Fight.new(@diver, @shark)
 
   @diver = Diver.new("Drew", weapons[:knife], 10)
   @shark = Shark.new("Steve", 40)
   @swordfish = Swordfish.new("Simon", 20)
-end 
-
-def test_winner
-  @fight.duel
-  assert_equal(@shark, @fight.winner)
+  @fight = Fight.new(@diver, @shark)
 
 end 
+
+
+def test_who_is_fighting 
+  assert_equal(@fight.diver.name, "Drew")
+  assert_equal(@fight.fish.name, "Steve")
+end 
+
+
+
+# def test_winner
+#   @fight.duel
+#   assert_equal(@shark, @fight.winner)
+
+# end 
 
 
 

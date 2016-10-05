@@ -1,17 +1,23 @@
 class Fight 
-attr_reader :winner
+attr_reader :diver, :fish
   def initialize(diver, fish)
     @diver = diver
     @fish = fish 
-    @winner = nil
   end 
 
-  def duel
-      if @fish.strength > @diver.strength
-        @winner = @fish
-        else @winner = @diver 
-      end 
-  end 
+
+
+
+
+
+
+
+  # def duel
+  #     if @fish.strength > @diver.strength
+  #       @winner = @fish
+  #       else @winner = @diver 
+  #     end 
+  # end 
 
 
 

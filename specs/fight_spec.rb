@@ -21,19 +21,15 @@ def setup
 
 end 
 
-
 def test_who_is_fighting 
   assert_equal(@fight.diver.name, "Drew")
   assert_equal(@fight.fish.name, "Steve")
 end 
 
-
-
-# def test_winner
-#   @fight.duel
-#   assert_equal(@shark, @fight.winner)
-
-# end 
+  def test_winner
+   @fight.duel
+  assert_equal(@shark, @fight.winner)
+  end 
 
 
 

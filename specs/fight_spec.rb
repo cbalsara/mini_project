@@ -13,12 +13,14 @@ def setup
     :spear_gun => 50  #first increases str by 10, 
               }
 
+  battle_conditions = ["muddy", "clear"]
 
   @diver = Diver.new("Drew", weapons[:knife], 10)
   @shark = Shark.new("Steve", 40)
   @swordfish = Swordfish.new("Simon", 20)
   @fight = Fight.new(@diver, @shark)
   @fight2 = Fight.new(@diver, @swordfish)
+
 
 end 
 
@@ -37,38 +39,9 @@ def test_diver_vs_swordfish_with_knife
     assert_equal(@diver, @fight2.winner)
 end 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+def test_check_battle_conditions 
+   assert_equal(@fight.battle_condition != nil, false)
+end 
 
 
 

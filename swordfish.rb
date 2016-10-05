@@ -5,7 +5,4 @@ attr_reader :name, :strength
     @strength = strength
   end 
 
-
-
-
 end 

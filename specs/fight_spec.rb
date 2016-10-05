@@ -18,6 +18,7 @@ def setup
   @shark = Shark.new("Steve", 40)
   @swordfish = Swordfish.new("Simon", 20)
   @fight = Fight.new(@diver, @shark)
+  @fight2 = Fight.new(@diver, @swordfish)
 
 end 
 
@@ -26,10 +27,15 @@ def test_who_is_fighting
   assert_equal(@fight.fish.name, "Steve")
 end 
 
-  def test_winner
-   @fight.duel
+def test_winner
+  @fight.duel
   assert_equal(@shark, @fight.winner)
-  end 
+end 
+
+def test_diver_vs_swordfish_with_knife
+    @fight2.duel
+    assert_equal(@diver, @fight2.winner)
+end 
 
 
 

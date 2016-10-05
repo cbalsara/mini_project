@@ -6,25 +6,19 @@ attr_reader :diver, :fish, :winner
     @winner = nil  
   end 
 
+  #this was for the def_test_winner 
+    # def duel
+    #       if @diver.strength < @fish.strength
+    #         @winner = @fish
+    #         else @winner = @diver 
+    #       end 
+    # end 
 
     def duel
-          if @diver.strength < @fish.strength
-            @winner = @fish
-            else @winner = @diver 
+          if @diver.attack_power < @fish.strength
+              @winner = @fish
+              else @winner = @diver 
           end 
     end 
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 end 
